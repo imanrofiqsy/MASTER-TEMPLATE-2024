@@ -61,6 +61,7 @@ Partial Class MainForm
         Me.TextBox1.Location = New System.Drawing.Point(12, 121)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(1326, 30)
         Me.TextBox1.TabIndex = 26
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
@@ -137,7 +138,6 @@ Partial Class MainForm
         '
         'btn_st6
         '
-        Me.btn_st6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
         Me.btn_st6.Location = New System.Drawing.Point(1218, 624)
@@ -150,7 +150,6 @@ Partial Class MainForm
         '
         'btn_setting
         '
-        Me.btn_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_setting.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_setting.Image = Global.MASTER.My.Resources.Resources.icons8_setting_50
         Me.btn_setting.Location = New System.Drawing.Point(12, 624)
@@ -163,7 +162,6 @@ Partial Class MainForm
         '
         'btn_st5
         '
-        Me.btn_st5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
         Me.btn_st5.Location = New System.Drawing.Point(1218, 533)
@@ -176,7 +174,6 @@ Partial Class MainForm
         '
         'btn_log
         '
-        Me.btn_log.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_log.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_log.Image = Global.MASTER.My.Resources.Resources.icons8_log_50
         Me.btn_log.Location = New System.Drawing.Point(12, 533)
@@ -189,7 +186,6 @@ Partial Class MainForm
         '
         'btn_st4
         '
-        Me.btn_st4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
         Me.btn_st4.Location = New System.Drawing.Point(1218, 442)
@@ -202,7 +198,6 @@ Partial Class MainForm
         '
         'btn_alarm
         '
-        Me.btn_alarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_alarm.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_alarm.Image = Global.MASTER.My.Resources.Resources.icons8_siren_50
         Me.btn_alarm.Location = New System.Drawing.Point(12, 442)
@@ -215,7 +210,6 @@ Partial Class MainForm
         '
         'btn_st3
         '
-        Me.btn_st3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
         Me.btn_st3.Location = New System.Drawing.Point(1218, 351)
@@ -228,7 +222,6 @@ Partial Class MainForm
         '
         'btn_references
         '
-        Me.btn_references.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_references.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_references.Image = Global.MASTER.My.Resources.Resources.icons8_open_book_50
         Me.btn_references.Location = New System.Drawing.Point(12, 351)
@@ -241,7 +234,6 @@ Partial Class MainForm
         '
         'btn_st2
         '
-        Me.btn_st2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
         Me.btn_st2.Location = New System.Drawing.Point(1218, 260)
@@ -254,7 +246,6 @@ Partial Class MainForm
         '
         'btn_manual
         '
-        Me.btn_manual.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_manual.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_manual.Image = Global.MASTER.My.Resources.Resources.icons8_manual_50
         Me.btn_manual.Location = New System.Drawing.Point(12, 260)
@@ -267,7 +258,6 @@ Partial Class MainForm
         '
         'btn_st1
         '
-        Me.btn_st1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
         Me.btn_st1.Location = New System.Drawing.Point(1218, 169)
@@ -280,7 +270,6 @@ Partial Class MainForm
         '
         'btn_home
         '
-        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
         Me.btn_home.Location = New System.Drawing.Point(12, 169)
@@ -293,7 +282,6 @@ Partial Class MainForm
         '
         'btn_login
         '
-        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
         Me.btn_login.Location = New System.Drawing.Point(1101, 20)
@@ -317,7 +305,6 @@ Partial Class MainForm
         '
         'pb_status_mc
         '
-        Me.pb_status_mc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
         Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
         Me.pb_status_mc.Name = "pb_status_mc"
@@ -328,7 +315,6 @@ Partial Class MainForm
         '
         'pb_logo
         '
-        Me.pb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
         Me.pb_logo.Location = New System.Drawing.Point(12, 20)
         Me.pb_logo.Name = "pb_logo"

@@ -52,6 +52,7 @@ Partial Class AlarmForm
         Me.TextBox1.Location = New System.Drawing.Point(12, 121)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(1326, 30)
         Me.TextBox1.TabIndex = 61
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
@@ -137,7 +138,6 @@ Partial Class AlarmForm
         '
         'btn_login
         '
-        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
         Me.btn_login.Location = New System.Drawing.Point(1101, 20)
@@ -150,7 +150,6 @@ Partial Class AlarmForm
         '
         'pb_status_mc
         '
-        Me.pb_status_mc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
         Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
         Me.pb_status_mc.Name = "pb_status_mc"
@@ -161,7 +160,6 @@ Partial Class AlarmForm
         '
         'pb_logo
         '
-        Me.pb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
         Me.pb_logo.Location = New System.Drawing.Point(12, 20)
         Me.pb_logo.Name = "pb_logo"
@@ -183,7 +181,6 @@ Partial Class AlarmForm
         '
         'btn_home
         '
-        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
         Me.btn_home.Location = New System.Drawing.Point(12, 169)

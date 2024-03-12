@@ -32,6 +32,13 @@ Partial Class LogForm
         Me.btn_home = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox_Status = New System.Windows.Forms.GroupBox()
+        Me.RTB_Status = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox_Export = New System.Windows.Forms.GroupBox()
+        Me.btn_fileLocation = New System.Windows.Forms.Button()
+        Me.ProgressBarExport = New System.Windows.Forms.ProgressBar()
+        Me.txtFileLocation = New System.Windows.Forms.TextBox()
+        Me.btn_export = New System.Windows.Forms.Button()
         Me.GroupBox_Filter = New System.Windows.Forms.GroupBox()
         Me.rbByREF = New System.Windows.Forms.RadioButton()
         Me.rbBydate = New System.Windows.Forms.RadioButton()
@@ -48,23 +55,18 @@ Partial Class LogForm
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
-        Me.GroupBox_Export = New System.Windows.Forms.GroupBox()
-        Me.btn_fileLocation = New System.Windows.Forms.Button()
-        Me.ProgressBarExport = New System.Windows.Forms.ProgressBar()
-        Me.txtFileLocation = New System.Windows.Forms.TextBox()
-        Me.btn_export = New System.Windows.Forms.Button()
-        Me.GroupBox_Status = New System.Windows.Forms.GroupBox()
-        Me.RTB_Status = New System.Windows.Forms.RichTextBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox_Status.SuspendLayout()
+        Me.GroupBox_Export.SuspendLayout()
         Me.GroupBox_Filter.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox_Export.SuspendLayout()
-        Me.GroupBox_Status.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -75,6 +77,7 @@ Partial Class LogForm
         Me.TextBox1.Location = New System.Drawing.Point(12, 121)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(1326, 30)
         Me.TextBox1.TabIndex = 73
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
@@ -139,7 +142,6 @@ Partial Class LogForm
         '
         'btn_home
         '
-        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
         Me.btn_home.Location = New System.Drawing.Point(12, 169)
@@ -153,22 +155,100 @@ Partial Class LogForm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 13)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1188, 345)
+        Me.DataGridView1.Size = New System.Drawing.Size(1176, 339)
         Me.DataGridView1.TabIndex = 0
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox_Status)
         Me.GroupBox1.Controls.Add(Me.GroupBox_Export)
         Me.GroupBox1.Controls.Add(Me.GroupBox_Filter)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Location = New System.Drawing.Point(138, 163)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1200, 546)
         Me.GroupBox1.TabIndex = 74
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox_Status
+        '
+        Me.GroupBox_Status.BackColor = System.Drawing.Color.White
+        Me.GroupBox_Status.Controls.Add(Me.RTB_Status)
+        Me.GroupBox_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox_Status.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox_Status.Location = New System.Drawing.Point(816, 370)
+        Me.GroupBox_Status.Name = "GroupBox_Status"
+        Me.GroupBox_Status.Size = New System.Drawing.Size(378, 170)
+        Me.GroupBox_Status.TabIndex = 24
+        Me.GroupBox_Status.TabStop = False
+        Me.GroupBox_Status.Text = "Status"
+        '
+        'RTB_Status
+        '
+        Me.RTB_Status.BackColor = System.Drawing.Color.White
+        Me.RTB_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RTB_Status.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.RTB_Status.Location = New System.Drawing.Point(6, 25)
+        Me.RTB_Status.Name = "RTB_Status"
+        Me.RTB_Status.ReadOnly = True
+        Me.RTB_Status.Size = New System.Drawing.Size(366, 139)
+        Me.RTB_Status.TabIndex = 0
+        Me.RTB_Status.Text = ""
+        '
+        'GroupBox_Export
+        '
+        Me.GroupBox_Export.BackColor = System.Drawing.Color.White
+        Me.GroupBox_Export.Controls.Add(Me.btn_fileLocation)
+        Me.GroupBox_Export.Controls.Add(Me.ProgressBarExport)
+        Me.GroupBox_Export.Controls.Add(Me.txtFileLocation)
+        Me.GroupBox_Export.Controls.Add(Me.btn_export)
+        Me.GroupBox_Export.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox_Export.ForeColor = System.Drawing.Color.Black
+        Me.GroupBox_Export.Location = New System.Drawing.Point(481, 370)
+        Me.GroupBox_Export.Name = "GroupBox_Export"
+        Me.GroupBox_Export.Size = New System.Drawing.Size(329, 170)
+        Me.GroupBox_Export.TabIndex = 22
+        Me.GroupBox_Export.TabStop = False
+        Me.GroupBox_Export.Text = "Export File Location"
+        '
+        'btn_fileLocation
+        '
+        Me.btn_fileLocation.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_fileLocation.Location = New System.Drawing.Point(22, 123)
+        Me.btn_fileLocation.Name = "btn_fileLocation"
+        Me.btn_fileLocation.Size = New System.Drawing.Size(94, 35)
+        Me.btn_fileLocation.TabIndex = 10
+        Me.btn_fileLocation.Text = "Select File Location"
+        Me.btn_fileLocation.UseVisualStyleBackColor = True
+        '
+        'ProgressBarExport
+        '
+        Me.ProgressBarExport.Location = New System.Drawing.Point(22, 63)
+        Me.ProgressBarExport.Name = "ProgressBarExport"
+        Me.ProgressBarExport.Size = New System.Drawing.Size(289, 23)
+        Me.ProgressBarExport.TabIndex = 9
+        '
+        'txtFileLocation
+        '
+        Me.txtFileLocation.BackColor = System.Drawing.Color.White
+        Me.txtFileLocation.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFileLocation.ForeColor = System.Drawing.Color.Black
+        Me.txtFileLocation.Location = New System.Drawing.Point(22, 31)
+        Me.txtFileLocation.Name = "txtFileLocation"
+        Me.txtFileLocation.Size = New System.Drawing.Size(289, 22)
+        Me.txtFileLocation.TabIndex = 8
+        '
+        'btn_export
+        '
+        Me.btn_export.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_export.Location = New System.Drawing.Point(217, 123)
+        Me.btn_export.Name = "btn_export"
+        Me.btn_export.Size = New System.Drawing.Size(94, 35)
+        Me.btn_export.TabIndex = 6
+        Me.btn_export.Text = "Export"
+        Me.btn_export.UseVisualStyleBackColor = True
         '
         'GroupBox_Filter
         '
@@ -295,7 +375,6 @@ Partial Class LogForm
         '
         'btn_login
         '
-        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
         Me.btn_login.Location = New System.Drawing.Point(1101, 20)
@@ -308,7 +387,6 @@ Partial Class LogForm
         '
         'pb_status_mc
         '
-        Me.pb_status_mc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
         Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
         Me.pb_status_mc.Name = "pb_status_mc"
@@ -319,7 +397,6 @@ Partial Class LogForm
         '
         'pb_logo
         '
-        Me.pb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
         Me.pb_logo.Location = New System.Drawing.Point(12, 20)
         Me.pb_logo.Name = "pb_logo"
@@ -339,83 +416,14 @@ Partial Class LogForm
         Me.pb_status_bar.TabIndex = 65
         Me.pb_status_bar.TabStop = False
         '
-        'GroupBox_Export
+        'GroupBox4
         '
-        Me.GroupBox_Export.BackColor = System.Drawing.Color.White
-        Me.GroupBox_Export.Controls.Add(Me.btn_fileLocation)
-        Me.GroupBox_Export.Controls.Add(Me.ProgressBarExport)
-        Me.GroupBox_Export.Controls.Add(Me.txtFileLocation)
-        Me.GroupBox_Export.Controls.Add(Me.btn_export)
-        Me.GroupBox_Export.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox_Export.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox_Export.Location = New System.Drawing.Point(481, 370)
-        Me.GroupBox_Export.Name = "GroupBox_Export"
-        Me.GroupBox_Export.Size = New System.Drawing.Size(329, 170)
-        Me.GroupBox_Export.TabIndex = 22
-        Me.GroupBox_Export.TabStop = False
-        Me.GroupBox_Export.Text = "Export File Location"
-        '
-        'btn_fileLocation
-        '
-        Me.btn_fileLocation.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_fileLocation.Location = New System.Drawing.Point(22, 123)
-        Me.btn_fileLocation.Name = "btn_fileLocation"
-        Me.btn_fileLocation.Size = New System.Drawing.Size(94, 35)
-        Me.btn_fileLocation.TabIndex = 10
-        Me.btn_fileLocation.Text = "Select File Location"
-        Me.btn_fileLocation.UseVisualStyleBackColor = True
-        '
-        'ProgressBarExport
-        '
-        Me.ProgressBarExport.Location = New System.Drawing.Point(22, 63)
-        Me.ProgressBarExport.Name = "ProgressBarExport"
-        Me.ProgressBarExport.Size = New System.Drawing.Size(289, 23)
-        Me.ProgressBarExport.TabIndex = 9
-        '
-        'txtFileLocation
-        '
-        Me.txtFileLocation.BackColor = System.Drawing.Color.White
-        Me.txtFileLocation.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFileLocation.ForeColor = System.Drawing.Color.Black
-        Me.txtFileLocation.Location = New System.Drawing.Point(22, 31)
-        Me.txtFileLocation.Name = "txtFileLocation"
-        Me.txtFileLocation.Size = New System.Drawing.Size(289, 22)
-        Me.txtFileLocation.TabIndex = 8
-        '
-        'btn_export
-        '
-        Me.btn_export.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_export.Location = New System.Drawing.Point(217, 123)
-        Me.btn_export.Name = "btn_export"
-        Me.btn_export.Size = New System.Drawing.Size(94, 35)
-        Me.btn_export.TabIndex = 6
-        Me.btn_export.Text = "Export"
-        Me.btn_export.UseVisualStyleBackColor = True
-        '
-        'GroupBox_Status
-        '
-        Me.GroupBox_Status.BackColor = System.Drawing.Color.White
-        Me.GroupBox_Status.Controls.Add(Me.RTB_Status)
-        Me.GroupBox_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox_Status.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox_Status.Location = New System.Drawing.Point(816, 370)
-        Me.GroupBox_Status.Name = "GroupBox_Status"
-        Me.GroupBox_Status.Size = New System.Drawing.Size(378, 170)
-        Me.GroupBox_Status.TabIndex = 24
-        Me.GroupBox_Status.TabStop = False
-        Me.GroupBox_Status.Text = "Status"
-        '
-        'RTB_Status
-        '
-        Me.RTB_Status.BackColor = System.Drawing.Color.White
-        Me.RTB_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RTB_Status.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.RTB_Status.Location = New System.Drawing.Point(6, 25)
-        Me.RTB_Status.Name = "RTB_Status"
-        Me.RTB_Status.ReadOnly = True
-        Me.RTB_Status.Size = New System.Drawing.Size(366, 139)
-        Me.RTB_Status.TabIndex = 0
-        Me.RTB_Status.Text = ""
+        Me.GroupBox4.Controls.Add(Me.DataGridView1)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(1188, 358)
+        Me.GroupBox4.TabIndex = 25
+        Me.GroupBox4.TabStop = False
         '
         'LogForm
         '
@@ -440,6 +448,9 @@ Partial Class LogForm
         Me.Text = "LogForm"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox_Status.ResumeLayout(False)
+        Me.GroupBox_Export.ResumeLayout(False)
+        Me.GroupBox_Export.PerformLayout()
         Me.GroupBox_Filter.ResumeLayout(False)
         Me.GroupBox_Filter.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -449,9 +460,7 @@ Partial Class LogForm
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox_Export.ResumeLayout(False)
-        Me.GroupBox_Export.PerformLayout()
-        Me.GroupBox_Status.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -489,4 +498,5 @@ Partial Class LogForm
     Friend WithEvents ProgressBarExport As ProgressBar
     Friend WithEvents txtFileLocation As TextBox
     Friend WithEvents btn_export As Button
+    Friend WithEvents GroupBox4 As GroupBox
 End Class

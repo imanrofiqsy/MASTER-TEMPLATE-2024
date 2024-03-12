@@ -33,9 +33,11 @@ Partial Class LoadingForm
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
         Me.PictureBox1.Location = New System.Drawing.Point(86, 9)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(267, 79)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 10
         Me.PictureBox1.TabStop = False
         '
@@ -64,6 +66,7 @@ Partial Class LoadingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(434, 161)
         Me.Controls.Add(Me.LoadingBar)
         Me.Controls.Add(Me.lbl_loading)

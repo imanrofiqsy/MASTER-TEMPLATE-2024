@@ -25,12 +25,21 @@ Partial Class ReferencesForm
         Me.components = New System.ComponentModel.Container()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btn_delete = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
+        Me.btn_add = New System.Windows.Forms.Button()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -42,7 +51,6 @@ Partial Class ReferencesForm
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -54,20 +62,14 @@ Partial Class ReferencesForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.btn_add = New System.Windows.Forms.Button()
-        Me.btn_delete = New System.Windows.Forms.Button()
-        Me.btn_update = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'DateTime
@@ -76,14 +78,51 @@ Partial Class ReferencesForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Location = New System.Drawing.Point(138, 163)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1200, 546)
         Me.GroupBox1.TabIndex = 50
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.DataGridView1)
+        Me.GroupBox4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(231, 19)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(963, 521)
+        Me.GroupBox4.TabIndex = 2
+        Me.GroupBox4.TabStop = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(6, 15)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(951, 500)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 401)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(219, 139)
+        Me.GroupBox3.TabIndex = 1
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Status"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(6, 25)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(207, 109)
+        Me.RichTextBox1.TabIndex = 0
+        Me.RichTextBox1.Text = ""
         '
         'GroupBox2
         '
@@ -115,6 +154,33 @@ Partial Class ReferencesForm
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Reference Control"
+        '
+        'btn_delete
+        '
+        Me.btn_delete.Location = New System.Drawing.Point(151, 325)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(62, 35)
+        Me.btn_delete.TabIndex = 13
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = True
+        '
+        'btn_update
+        '
+        Me.btn_update.Location = New System.Drawing.Point(77, 325)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(62, 35)
+        Me.btn_update.TabIndex = 13
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = True
+        '
+        'btn_add
+        '
+        Me.btn_add.Location = New System.Drawing.Point(3, 325)
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Size = New System.Drawing.Size(62, 35)
+        Me.btn_add.TabIndex = 13
+        Me.btn_add.Text = "Add"
+        Me.btn_add.UseVisualStyleBackColor = True
         '
         'TextBox9
         '
@@ -148,12 +214,28 @@ Partial Class ReferencesForm
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Label3"
         '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(63, 281)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(150, 26)
+        Me.TextBox10.TabIndex = 7
+        '
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(63, 217)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(150, 26)
         Me.TextBox8.TabIndex = 7
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(7, 284)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(50, 20)
+        Me.Label11.TabIndex = 3
+        Me.Label11.Text = "Label3"
         '
         'TextBox4
         '
@@ -244,14 +326,6 @@ Partial Class ReferencesForm
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Label3"
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(231, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(963, 521)
-        Me.DataGridView1.TabIndex = 0
-        '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.DarkRed
@@ -260,6 +334,7 @@ Partial Class ReferencesForm
         Me.TextBox1.Location = New System.Drawing.Point(12, 121)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(1326, 30)
         Me.TextBox1.TabIndex = 49
         Me.TextBox1.Text = "ALARM : . . . . . . . . "
@@ -324,7 +399,6 @@ Partial Class ReferencesForm
         '
         'btn_home
         '
-        Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
         Me.btn_home.Location = New System.Drawing.Point(12, 169)
@@ -337,7 +411,6 @@ Partial Class ReferencesForm
         '
         'btn_login
         '
-        Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
         Me.btn_login.Location = New System.Drawing.Point(1101, 20)
@@ -361,7 +434,6 @@ Partial Class ReferencesForm
         '
         'pb_status_mc
         '
-        Me.pb_status_mc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
         Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
         Me.pb_status_mc.Name = "pb_status_mc"
@@ -372,7 +444,6 @@ Partial Class ReferencesForm
         '
         'pb_logo
         '
-        Me.pb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
         Me.pb_logo.Location = New System.Drawing.Point(12, 20)
         Me.pb_logo.Name = "pb_logo"
@@ -380,68 +451,6 @@ Partial Class ReferencesForm
         Me.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb_logo.TabIndex = 28
         Me.pb_logo.TabStop = False
-        '
-        'btn_add
-        '
-        Me.btn_add.Location = New System.Drawing.Point(3, 325)
-        Me.btn_add.Name = "btn_add"
-        Me.btn_add.Size = New System.Drawing.Size(62, 35)
-        Me.btn_add.TabIndex = 13
-        Me.btn_add.Text = "Add"
-        Me.btn_add.UseVisualStyleBackColor = True
-        '
-        'btn_delete
-        '
-        Me.btn_delete.Location = New System.Drawing.Point(151, 325)
-        Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(62, 35)
-        Me.btn_delete.TabIndex = 13
-        Me.btn_delete.Text = "Delete"
-        Me.btn_delete.UseVisualStyleBackColor = True
-        '
-        'btn_update
-        '
-        Me.btn_update.Location = New System.Drawing.Point(77, 325)
-        Me.btn_update.Name = "btn_update"
-        Me.btn_update.Size = New System.Drawing.Size(62, 35)
-        Me.btn_update.TabIndex = 13
-        Me.btn_update.Text = "Update"
-        Me.btn_update.UseVisualStyleBackColor = True
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.RichTextBox1)
-        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 401)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(219, 139)
-        Me.GroupBox3.TabIndex = 1
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Status"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 25)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(207, 109)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(7, 284)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(50, 20)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "Label3"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(63, 281)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox10.TabIndex = 7
         '
         'ReferencesForm
         '
@@ -465,13 +474,14 @@ Partial Class ReferencesForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ReferencesForm"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -515,4 +525,5 @@ Partial Class ReferencesForm
     Friend WithEvents btn_add As Button
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents GroupBox4 As GroupBox
 End Class
