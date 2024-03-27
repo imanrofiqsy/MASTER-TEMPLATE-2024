@@ -1,4 +1,6 @@
-﻿Public Class ManualForm
+﻿Imports System.Threading
+Public Class ManualForm
+    Dim ManualThread As Thread
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -21,5 +23,54 @@
 
     Private Sub ManualForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         GetUserLevel()
+        ManualThread = New Thread(AddressOf MainLoop)
+        ManualThread.Start()
+    End Sub
+
+    Private Sub MainLoop()
+        Do
+            If GetCylinder.V101 = 1 Then
+                ind_v101_max.Image = My.Resources.led_green_on
+            Else
+                ind_v101_max.Image = My.Resources.led_red_on
+            End If
+
+            If GetCylinder.V101 = 2 Then
+                ind_v101_min.Image = My.Resources.led_green_on
+            Else
+                ind_v101_min.Image = My.Resources.led_red_on
+            End If
+            Thread.Sleep(150)
+        Loop
+    End Sub
+
+    Private Sub btn_v101_fw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v101_fw.MouseDown
+        SetCylinder.V101 = 1
+        PlcTrigger = True
+    End Sub
+
+    Private Sub btn_v101_fw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v101_fw.MouseUp
+        SetCylinder.V101 = 0
+        PlcTrigger = True
+    End Sub
+
+    Private Sub btn_v101_bw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v101_bw.MouseDown
+        SetCylinder.V101 = 2
+        PlcTrigger = True
+    End Sub
+
+    Private Sub btn_v101_bw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v101_bw.MouseUp
+        SetCylinder.V101 = 0
+        PlcTrigger = True
+    End Sub
+
+    Private Sub Button3_MouseDown(sender As Object, e As MouseEventArgs) Handles Button3.MouseDown
+        SetCylinder.TurnTable = 1
+        PlcTrigger = True
+    End Sub
+
+    Private Sub Button3_MouseUp(sender As Object, e As MouseEventArgs) Handles Button3.MouseUp
+        SetCylinder.TurnTable = 0
+        PlcTrigger = True
     End Sub
 End Class

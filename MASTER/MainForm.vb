@@ -1,6 +1,9 @@
-﻿Imports System.Threading
+﻿Imports System.ComponentModel
+Imports System.Threading
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
+    Dim ThreadModbus As Thread
+    Dim Modbus = New Modbus
     Private Sub initLoadingBar()
         ThreadLoadingBar = New Thread(New ThreadStart(AddressOf ProcessLoad))
         ThreadLoadingBar.Start()
@@ -81,32 +84,66 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         Hide()
+        LoginForm.ShowDialog()
         initLoadingBar()
 
-        UpdateLoadingBar(20, "Loading?? 1...")
-        Thread.Sleep(500)
+        Try
+            UpdateLoadingBar(20, "Establishing connection to PLC...")
+            Modbus.OpenPort("127.0.0.1", "502")
+            Thread.Sleep(500)
 
-        UpdateLoadingBar(40, "Loading?? 2...")
-        Thread.Sleep(500)
+            UpdateLoadingBar(40, "Loading?? 2...")
+            Thread.Sleep(500)
 
-        UpdateLoadingBar(60, "Loading?? 3...")
-        Thread.Sleep(500)
+            UpdateLoadingBar(60, "Loading?? 3...")
+            Thread.Sleep(500)
 
-        UpdateLoadingBar(80, "Loading?? 4...")
-        Thread.Sleep(500)
+            UpdateLoadingBar(80, "Creating Multithreading...")
+            ThreadModbus = New Thread(AddressOf MainModbus)
+            ThreadModbus.Start()
+            Thread.Sleep(500)
 
-        UpdateLoadingBar(100, "Loading?? 6...")
-        Thread.Sleep(500)
+            UpdateLoadingBar(100, "Loading?? 6...")
+            Thread.Sleep(500)
+        Catch ex As Exception
+            UpdateLoadingBar(LoadingBarValue, "Error.. " + ex.Message + ", App is Clossing...")
+            Thread.Sleep(2000)
+            End
+        End Try
 
         killLoadingBar()
         Cursor = Cursors.Default
-        LoginForm.ShowDialog()
         GetUserLevel()
     End Sub
-
+    Private Sub MainModbus()
+        Do
+            If Not PlcTrigger Then
+                PlcReading()
+            Else
+                PlcWriting()
+                Thread.Sleep(100)
+                PlcTrigger = False
+            End If
+            Thread.Sleep(150)
+        Loop
+    End Sub
+    Private Sub PlcWriting()
+        Modbus.WriteInteger(1101, SetCylinder.V101)
+        Modbus.WriteInteger(1110, SetCylinder.TurnTable)
+    End Sub
+    Private Sub PlcReading()
+        GetCylinder.V101 = Modbus.ReadInteger(6101)
+        GetCylinder.V102 = Modbus.ReadInteger(6102)
+    End Sub
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         Hide()
         LoginForm.ShowDialog()
         GetUserLevel()
+    End Sub
+
+    Private Sub MainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        If ThreadModbus.IsAlive Then
+            ThreadModbus.Abort()
+        End If
     End Sub
 End Class

@@ -51,6 +51,9 @@
     <Reference Include="ControlBPM">
       <HintPath>..\libraries\ControlBPM.dll</HintPath>
     </Reference>
+    <Reference Include="EasyModbus, Version=5.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyModbusTCP.5.6.0\lib\net40\EasyModbus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -114,6 +117,7 @@
     <Compile Include="ManualForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modbus.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -187,6 +191,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\icons8-change-user-85.png" />
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-save-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led-green-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\led-red-on.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

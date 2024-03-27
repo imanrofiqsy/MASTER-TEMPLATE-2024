@@ -31,6 +31,32 @@ Partial Class ManualForm
         Me.lbl_curr_time = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_user = New System.Windows.Forms.Label()
+        Me.gb_ST1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.btn_v101_bw = New System.Windows.Forms.Button()
+        Me.btn_v101_fw = New System.Windows.Forms.Button()
+        Me.ind_v101_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v101_max = New System.Windows.Forms.PictureBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label301 = New System.Windows.Forms.Label()
+        Me.Label283 = New System.Windows.Forms.Label()
+        Me.Label288 = New System.Windows.Forms.Label()
+        Me.Label280 = New System.Windows.Forms.Label()
+        Me.Label285 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label284 = New System.Windows.Forms.Label()
+        Me.Label281 = New System.Windows.Forms.Label()
+        Me.ind_safety_st6 = New System.Windows.Forms.PictureBox()
+        Me.ind_safety_st2 = New System.Windows.Forms.PictureBox()
+        Me.ind_safety_st4 = New System.Windows.Forms.PictureBox()
+        Me.ind_cycle_status = New System.Windows.Forms.PictureBox()
+        Me.ind_safety_st5 = New System.Windows.Forms.PictureBox()
+        Me.ind_safety_st1 = New System.Windows.Forms.PictureBox()
+        Me.ind_safety_st3 = New System.Windows.Forms.PictureBox()
+        Me.ind_altivar_status = New System.Windows.Forms.PictureBox()
         Me.btn_st6 = New System.Windows.Forms.Button()
         Me.btn_st5 = New System.Windows.Forms.Button()
         Me.btn_st4 = New System.Windows.Forms.Button()
@@ -42,7 +68,21 @@ Partial Class ManualForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gb_ST1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.ind_safety_st6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safety_st2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safety_st4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_cycle_status, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safety_st5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safety_st1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safety_st3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_altivar_status, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +162,305 @@ Partial Class ManualForm
         Me.lbl_user.Size = New System.Drawing.Size(146, 75)
         Me.lbl_user.TabIndex = 8
         Me.lbl_user.Text = "ENG"
+        '
+        'gb_ST1
+        '
+        Me.gb_ST1.Controls.Add(Me.GroupBox3)
+        Me.gb_ST1.Controls.Add(Me.GroupBox2)
+        Me.gb_ST1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gb_ST1.Location = New System.Drawing.Point(138, 169)
+        Me.gb_ST1.Name = "gb_ST1"
+        Me.gb_ST1.Size = New System.Drawing.Size(1074, 540)
+        Me.gb_ST1.TabIndex = 29
+        Me.gb_ST1.TabStop = False
+        Me.gb_ST1.Text = "STATION 1"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.GroupBox5)
+        Me.GroupBox3.Controls.Add(Me.GroupBox4)
+        Me.GroupBox3.Location = New System.Drawing.Point(199, 41)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(869, 464)
+        Me.GroupBox3.TabIndex = 3
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "OPERATION"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.Button3)
+        Me.GroupBox5.Location = New System.Drawing.Point(191, 25)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(135, 110)
+        Me.GroupBox5.TabIndex = 112
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "TURN TABLE"
+        '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Arial Narrow", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(14, 24)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(110, 76)
+        Me.Button3.TabIndex = 108
+        Me.Button3.Text = "TRIGGER TURN TABLE"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.btn_v101_bw)
+        Me.GroupBox4.Controls.Add(Me.btn_v101_fw)
+        Me.GroupBox4.Controls.Add(Me.ind_v101_min)
+        Me.GroupBox4.Controls.Add(Me.ind_v101_max)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(175, 110)
+        Me.GroupBox4.TabIndex = 111
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "CYL V101"
+        '
+        'btn_v101_bw
+        '
+        Me.btn_v101_bw.Location = New System.Drawing.Point(12, 65)
+        Me.btn_v101_bw.Name = "btn_v101_bw"
+        Me.btn_v101_bw.Size = New System.Drawing.Size(110, 35)
+        Me.btn_v101_bw.TabIndex = 108
+        Me.btn_v101_bw.Text = "BACKWARD"
+        Me.btn_v101_bw.UseVisualStyleBackColor = True
+        '
+        'btn_v101_fw
+        '
+        Me.btn_v101_fw.Location = New System.Drawing.Point(12, 24)
+        Me.btn_v101_fw.Name = "btn_v101_fw"
+        Me.btn_v101_fw.Size = New System.Drawing.Size(110, 35)
+        Me.btn_v101_fw.TabIndex = 109
+        Me.btn_v101_fw.Text = "FORWARD"
+        Me.btn_v101_fw.UseVisualStyleBackColor = True
+        '
+        'ind_v101_min
+        '
+        Me.ind_v101_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v101_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v101_min.Image = CType(resources.GetObject("ind_v101_min.Image"), System.Drawing.Image)
+        Me.ind_v101_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v101_min.Name = "ind_v101_min"
+        Me.ind_v101_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v101_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v101_min.TabIndex = 110
+        Me.ind_v101_min.TabStop = False
+        '
+        'ind_v101_max
+        '
+        Me.ind_v101_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v101_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v101_max.Image = CType(resources.GetObject("ind_v101_max.Image"), System.Drawing.Image)
+        Me.ind_v101_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v101_max.Name = "ind_v101_max"
+        Me.ind_v101_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v101_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v101_max.TabIndex = 111
+        Me.ind_v101_max.TabStop = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label301)
+        Me.GroupBox2.Controls.Add(Me.Label283)
+        Me.GroupBox2.Controls.Add(Me.Label288)
+        Me.GroupBox2.Controls.Add(Me.Label280)
+        Me.GroupBox2.Controls.Add(Me.Label285)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label284)
+        Me.GroupBox2.Controls.Add(Me.Label281)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st6)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st2)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st4)
+        Me.GroupBox2.Controls.Add(Me.ind_cycle_status)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st5)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st1)
+        Me.GroupBox2.Controls.Add(Me.ind_safety_st3)
+        Me.GroupBox2.Controls.Add(Me.ind_altivar_status)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 41)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(177, 464)
+        Me.GroupBox2.TabIndex = 2
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "STATUS INDICATOR"
+        '
+        'Label301
+        '
+        Me.Label301.AutoSize = True
+        Me.Label301.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label301.Location = New System.Drawing.Point(58, 428)
+        Me.Label301.Name = "Label301"
+        Me.Label301.Size = New System.Drawing.Size(106, 20)
+        Me.Label301.TabIndex = 122
+        Me.Label301.Text = "Safety Station 6"
+        '
+        'Label283
+        '
+        Me.Label283.AutoSize = True
+        Me.Label283.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label283.Location = New System.Drawing.Point(57, 203)
+        Me.Label283.Name = "Label283"
+        Me.Label283.Size = New System.Drawing.Size(106, 20)
+        Me.Label283.TabIndex = 121
+        Me.Label283.Text = "Safety Station 2"
+        '
+        'Label288
+        '
+        Me.Label288.AutoSize = True
+        Me.Label288.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label288.Location = New System.Drawing.Point(58, 316)
+        Me.Label288.Name = "Label288"
+        Me.Label288.Size = New System.Drawing.Size(106, 20)
+        Me.Label288.TabIndex = 120
+        Me.Label288.Text = "Safety Station 4"
+        '
+        'Label280
+        '
+        Me.Label280.AutoSize = True
+        Me.Label280.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label280.Location = New System.Drawing.Point(57, 91)
+        Me.Label280.Name = "Label280"
+        Me.Label280.Size = New System.Drawing.Size(86, 20)
+        Me.Label280.TabIndex = 119
+        Me.Label280.Text = "Cycle Status"
+        '
+        'Label285
+        '
+        Me.Label285.AutoSize = True
+        Me.Label285.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label285.Location = New System.Drawing.Point(58, 372)
+        Me.Label285.Name = "Label285"
+        Me.Label285.Size = New System.Drawing.Size(106, 20)
+        Me.Label285.TabIndex = 117
+        Me.Label285.Text = "Safety Station 5"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(57, 147)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 20)
+        Me.Label3.TabIndex = 116
+        Me.Label3.Text = "Safety Station 1"
+        '
+        'Label284
+        '
+        Me.Label284.AutoSize = True
+        Me.Label284.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label284.Location = New System.Drawing.Point(58, 260)
+        Me.Label284.Name = "Label284"
+        Me.Label284.Size = New System.Drawing.Size(106, 20)
+        Me.Label284.TabIndex = 118
+        Me.Label284.Text = "Safety Station 3"
+        '
+        'Label281
+        '
+        Me.Label281.AutoSize = True
+        Me.Label281.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label281.Location = New System.Drawing.Point(57, 35)
+        Me.Label281.Name = "Label281"
+        Me.Label281.Size = New System.Drawing.Size(92, 20)
+        Me.Label281.TabIndex = 115
+        Me.Label281.Text = "Altivar Status"
+        '
+        'ind_safety_st6
+        '
+        Me.ind_safety_st6.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st6.Image = CType(resources.GetObject("ind_safety_st6.Image"), System.Drawing.Image)
+        Me.ind_safety_st6.Location = New System.Drawing.Point(20, 423)
+        Me.ind_safety_st6.Name = "ind_safety_st6"
+        Me.ind_safety_st6.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st6.TabIndex = 114
+        Me.ind_safety_st6.TabStop = False
+        '
+        'ind_safety_st2
+        '
+        Me.ind_safety_st2.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st2.Image = CType(resources.GetObject("ind_safety_st2.Image"), System.Drawing.Image)
+        Me.ind_safety_st2.Location = New System.Drawing.Point(19, 198)
+        Me.ind_safety_st2.Name = "ind_safety_st2"
+        Me.ind_safety_st2.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st2.TabIndex = 113
+        Me.ind_safety_st2.TabStop = False
+        '
+        'ind_safety_st4
+        '
+        Me.ind_safety_st4.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st4.Image = CType(resources.GetObject("ind_safety_st4.Image"), System.Drawing.Image)
+        Me.ind_safety_st4.Location = New System.Drawing.Point(20, 311)
+        Me.ind_safety_st4.Name = "ind_safety_st4"
+        Me.ind_safety_st4.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st4.TabIndex = 112
+        Me.ind_safety_st4.TabStop = False
+        '
+        'ind_cycle_status
+        '
+        Me.ind_cycle_status.BackColor = System.Drawing.Color.Transparent
+        Me.ind_cycle_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_cycle_status.Image = CType(resources.GetObject("ind_cycle_status.Image"), System.Drawing.Image)
+        Me.ind_cycle_status.Location = New System.Drawing.Point(19, 86)
+        Me.ind_cycle_status.Name = "ind_cycle_status"
+        Me.ind_cycle_status.Size = New System.Drawing.Size(30, 30)
+        Me.ind_cycle_status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_cycle_status.TabIndex = 111
+        Me.ind_cycle_status.TabStop = False
+        '
+        'ind_safety_st5
+        '
+        Me.ind_safety_st5.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st5.Image = CType(resources.GetObject("ind_safety_st5.Image"), System.Drawing.Image)
+        Me.ind_safety_st5.Location = New System.Drawing.Point(20, 367)
+        Me.ind_safety_st5.Name = "ind_safety_st5"
+        Me.ind_safety_st5.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st5.TabIndex = 109
+        Me.ind_safety_st5.TabStop = False
+        '
+        'ind_safety_st1
+        '
+        Me.ind_safety_st1.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st1.Image = CType(resources.GetObject("ind_safety_st1.Image"), System.Drawing.Image)
+        Me.ind_safety_st1.Location = New System.Drawing.Point(19, 142)
+        Me.ind_safety_st1.Name = "ind_safety_st1"
+        Me.ind_safety_st1.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st1.TabIndex = 108
+        Me.ind_safety_st1.TabStop = False
+        '
+        'ind_safety_st3
+        '
+        Me.ind_safety_st3.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safety_st3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safety_st3.Image = CType(resources.GetObject("ind_safety_st3.Image"), System.Drawing.Image)
+        Me.ind_safety_st3.Location = New System.Drawing.Point(20, 255)
+        Me.ind_safety_st3.Name = "ind_safety_st3"
+        Me.ind_safety_st3.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safety_st3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safety_st3.TabIndex = 110
+        Me.ind_safety_st3.TabStop = False
+        '
+        'ind_altivar_status
+        '
+        Me.ind_altivar_status.BackColor = System.Drawing.Color.Transparent
+        Me.ind_altivar_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_altivar_status.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_altivar_status.Location = New System.Drawing.Point(19, 30)
+        Me.ind_altivar_status.Name = "ind_altivar_status"
+        Me.ind_altivar_status.Size = New System.Drawing.Size(30, 30)
+        Me.ind_altivar_status.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_altivar_status.TabIndex = 107
+        Me.ind_altivar_status.TabStop = False
         '
         'btn_st6
         '
@@ -250,21 +589,13 @@ Partial Class ManualForm
         Me.pb_logo.TabIndex = 5
         Me.pb_logo.TabStop = False
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Location = New System.Drawing.Point(138, 163)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1074, 546)
-        Me.GroupBox1.TabIndex = 28
-        Me.GroupBox1.TabStop = False
-        '
         'ManualForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1350, 729)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gb_ST1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btn_st6)
         Me.Controls.Add(Me.btn_st5)
@@ -285,6 +616,22 @@ Partial Class ManualForm
         Me.Name = "ManualForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Project Title"
+        Me.gb_ST1.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        CType(Me.ind_safety_st6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safety_st2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safety_st4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_cycle_status, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safety_st5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safety_st1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safety_st3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_altivar_status, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -311,5 +658,30 @@ Partial Class ManualForm
     Friend WithEvents pb_status_bar As PictureBox
     Friend WithEvents pb_status_mc As PictureBox
     Friend WithEvents pb_logo As PictureBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gb_ST1 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents btn_v101_bw As Button
+    Friend WithEvents btn_v101_fw As Button
+    Friend WithEvents ind_v101_min As PictureBox
+    Friend WithEvents ind_v101_max As PictureBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label301 As Label
+    Friend WithEvents Label283 As Label
+    Friend WithEvents Label288 As Label
+    Friend WithEvents Label280 As Label
+    Friend WithEvents Label285 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label284 As Label
+    Friend WithEvents Label281 As Label
+    Friend WithEvents ind_safety_st6 As PictureBox
+    Friend WithEvents ind_safety_st2 As PictureBox
+    Friend WithEvents ind_safety_st4 As PictureBox
+    Friend WithEvents ind_cycle_status As PictureBox
+    Friend WithEvents ind_safety_st5 As PictureBox
+    Friend WithEvents ind_safety_st1 As PictureBox
+    Friend WithEvents ind_safety_st3 As PictureBox
+    Friend WithEvents ind_altivar_status As PictureBox
 End Class
